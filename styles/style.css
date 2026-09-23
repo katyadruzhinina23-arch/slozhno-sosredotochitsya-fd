@@ -347,12 +347,12 @@
   }
 
   .section-block {
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    grid-template-columns: min(315px, 30.8vw) 2fr;
   }
 
   .section-title_alternate {
     grid-column: 1/-1;
+    width: 30.7vw;
   }
 
   .section-alternate {
