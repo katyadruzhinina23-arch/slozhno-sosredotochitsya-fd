@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #000028;
+  background-color: var(--bg-color);
 }
 
 .main {
@@ -17,14 +17,18 @@
 
 .header {
   box-sizing: border-box;
-  position: relative;
   display: grid;
+  gap: 40px;
   align-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   min-height: 668px;
   height: 100vh;
-  padding: 10px 0px;
+  padding: 10px 10px;
+}
+
+.decorated-zone {
+  position: relative;
 }
 
 .decorated-zone::before {
@@ -85,7 +89,8 @@
   font-family: var(--main-font);
   color: var(--main-color);
   font-size: var(--main-size);
-  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  border: none;
   background-color: inherit;
   cursor: pointer;
   text-transform: lowercase;
@@ -94,16 +99,17 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--main-color);
+  outline: 1px solid var(--main-color);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid var(--border-color-hover);
 }
 
 .header__theme-menu-button:focus {
   border: none;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -157,7 +163,7 @@
   line-height: 23.4px;
 }
 
-.article-list {
+.article {
   display: grid;
   gap: 10px;
 }
@@ -215,7 +221,7 @@
   place-items: center;
   position: relative;
   min-height: 668px;
-  height: auto;
+  height: 100vh;
 }
 
 .footer-title {
@@ -263,11 +269,11 @@
     align-items: start;
   }
 
-  .article-list {
+  .article {
     grid-column: 2;
   }
 
-  .article-list__alternate {
+  .article-alternate {
     grid-column: 1 / -1;
   }
 
@@ -276,35 +282,35 @@
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "title title title"
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street";
+      "A A A"
+      "B B C"
+      "D E C"
+      "D F F";
   }
 
-  .media-main-subtitle {
-    grid-area: title;
+  .media-main-subtitle:first-child {
+    grid-area: A;
     width: 100%;
   }
 
-  .sunset {
-    grid-area: sunset;
+  .gallery-img:nth-child(2) {
+    grid-area: B;
   }
 
-  .ice-cream {
-    grid-area: ice-cream;
+  .gallery-img:nth-child(3) {
+    grid-area: C;
   }
 
-  .tape {
-    grid-area: tape;
+  .gallery-img:nth-child(4) {
+    grid-area: D;
   }
 
-  .books {
-    grid-area: books;
+  .gallery-img:nth-child(5) {
+    grid-area: E;
   }
 
-  .street {
-    grid-area: street;
+  .gallery-img:last-child {
+    grid-area: F;
   }
 
   .footer {
@@ -360,7 +366,7 @@
     gap: 20px;
   }
 
-  .article-list__alternate {
+  .article-alternate {
     grid-column: auto;
   }
 

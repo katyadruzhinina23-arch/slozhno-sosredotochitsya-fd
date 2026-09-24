@@ -1,13 +1,31 @@
 :root.theme-dark {
-  .page {
-    --bg-image: url("../images/cover-image-dark.png");
-    --main-color: #ff0070;
-    --title-color: #db00ff;
-    --text-color: #f1b2ce;
-    --subhead-color: #000028;
+  --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: #000028;
+  --border-color-hover: rgba(255, 0, 112, 0.4);
+  --main-color: #ff0070;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --subhead-color: #000028;
+
+  .decor-label {
+    display: inline-flex;
   }
 
-  .subhead__decor {
-    --main-color: #ff0070;
+  .decor-label::after {
+    content: "";
+    display: inline-block;
   }
+
+  .title__decor {
+    text-shadow: 4px 4px 0 var(--main-color);
+  }
+
+  .text-highlight {
+   --main-color: #ff0070;
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid var(--border-color-hover);
+  }
+  
 }
