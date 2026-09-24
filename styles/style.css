@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  display: grid;
+  gap: 40px;
   box-sizing: border-box;
   background-image: var(--bg-image);
   background-position: center;
@@ -18,7 +20,6 @@
 .header {
   box-sizing: border-box;
   display: grid;
-  gap: 40px;
   align-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
@@ -36,7 +37,7 @@
   display: inline-block;
   position: absolute;
   top: 10px;
-  right: 0px;
+  right: 10px;
   border-top: 1px solid var(--main-color);
   border-right: 1px solid var(--main-color);
   width: 25px;
@@ -50,7 +51,7 @@
   border-bottom: 1px solid var(--main-color);
   width: 25px;
   height: 25px;
-  left: 0px;
+  left: 10px;
   bottom: 10px;
 }
 
@@ -229,6 +230,10 @@
 }
 
 @media (width >= 768px) {
+  .page {
+    gap: 60px;
+  }
+
   .main {
     padding: 0;
     gap: 60px;
@@ -259,7 +264,7 @@
 
   .header-subtitle {
     justify-self: end;
-    width: 48.7%;
+    width: 47.1vw;
   }
 
   .section-block {
@@ -319,6 +324,10 @@
 }
 
 @media (orientation: landscape) and (width >= 1024px) {
+  .page {
+    gap: 60px;
+  }
+
   .header {
     grid-template-columns: repeat(3, 1fr);
     min-height: 768px;
@@ -359,6 +368,7 @@
   .section-title_alternate {
     grid-column: 1/-1;
     width: 30.7vw;
+    margin-left: 2.9%;
   }
 
   .section-alternate {
