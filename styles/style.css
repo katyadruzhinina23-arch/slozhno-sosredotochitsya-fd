@@ -8,7 +8,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--bg-color);
+  background-color: var(--color-primary);
 }
 
 .main {
@@ -56,11 +56,11 @@
 }
 
 .decor-label {
-  display: inline-flex;
+  display: var(--display-label);
   align-items: center;
   position: absolute;
   top: 11px;
-  right: 9px;
+  right: 20px;
   font-family: var(--main-font);
   font-size: var(--main-size);
   color: var(--main-color);
@@ -146,7 +146,7 @@
 .subhead__decor {
   display: block;
   background-color: var(--main-color);
-  color: var(--subhead-color);
+  color: var(--color-primary);
   width: 100%;
 }
 
@@ -264,7 +264,7 @@
 
   .header-subtitle {
     justify-self: end;
-    width: 47.1vw;
+    width: 47.3vw;
   }
 
   .section-block {
@@ -368,7 +368,11 @@
   .section-title_alternate {
     grid-column: 1/-1;
     width: 30.7vw;
-    margin-left: 2.9%;
+    margin-left: var(--margin-left-title);
+  }
+
+  .image-section {
+    padding-bottom: var(--padding-bottom-image);
   }
 
   .section-alternate {

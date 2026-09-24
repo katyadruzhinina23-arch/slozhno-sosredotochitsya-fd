@@ -1,11 +1,13 @@
 :root {
   --bg-image: url("../images/cover-image-dark.png");
-  --bg-color: #000028;
+  --color-primary: #000028;
   --border-color-hover: rgba(255, 0, 112, 0.4);
   --main-color: #ff0070;
   --title-color: #db00ff;
   --text-color: #f1b2ce;
-  --subhead-color: #000028;
-  --main-font: "IBM Plex Mono", "Arial", "monospace";
+  --main-font: "IBM Plex Mono", "Arial", monospace;
   --main-size: 1.125rem;
+  --display-label: inline-flex;
+  --margin-left-title: none;
+  --padding-bottom-image: 5px;
 }
